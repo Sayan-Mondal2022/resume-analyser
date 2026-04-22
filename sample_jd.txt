@@ -1,0 +1,41 @@
+About the Role:
+We are seeking a highly driven Software Development Engineer (Fresher) with a strong foundation in Python, backend development, and AI/ML systems. The ideal candidate has hands-on experience building real-world applications involving APIs, chatbots, and machine learning models, and is eager to work on scalable, production-level systems.
+
+Key Responsibilities:
+- Design and develop backend systems and REST APIs using Python (Flask/FastAPI)
+- Build and deploy AI-powered applications such as chatbots and NLP-based systems
+- Work on LLM-based solutions (RAG pipelines, embeddings, vector databases)
+- Develop and optimize machine learning models for real-world use cases
+- Integrate third-party APIs (e.g., currency, AI services)
+- Collaborate with frontend developers to ensure seamless integration
+- Write clean, maintainable, and scalable code following best practices
+- Debug, test, and optimize application performance
+- Assist in deploying applications using Docker and cloud platforms (AWS)
+
+Required Skills:
+- Strong proficiency in Python programming
+- Good understanding of Data Structures and Algorithms
+- Hands-on experience with Flask and REST APIs
+- Basic knowledge of Machine Learning and NLP concepts
+- Familiarity with databases (MySQL / MongoDB)
+- Understanding of Git and version control
+- Strong problem-solving and analytical skills
+
+Preferred Skills (Good to Have):
+- Experience with LLMs, LangChain, or RAG-based systems
+- Knowledge of BERT, TensorFlow, or Scikit-learn
+- Familiarity with vector databases and embeddings
+- Experience deploying applications on AWS
+- Exposure to Docker and containerization
+- Basic frontend knowledge (HTML, CSS, JavaScript)
+
+Eligibility Criteria:
+- Bachelor’s degree in Computer Science / AI & ML / related field
+- Graduating in 2025 / 2026
+- Strong project portfolio (GitHub or live deployments preferred)
+
+Bonus (What Makes You Stand Out):
+- Projects involving LLMs, chatbots, or NLP pipelines
+- Participation in hackathons and competitions
+- Strong GitHub profile with active contributions
+- Experience deploying real-world applications
