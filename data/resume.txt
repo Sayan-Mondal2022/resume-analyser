@@ -1,0 +1,83 @@
+SAYAN MONDAL
+Bengaluru, India | +91 XXXXXXXXXX | your.email@gmail.com  
+GitHub: https://github.com/yourprofile | LinkedIn: https://linkedin.com/in/yourprofile | Portfolio: https://yourportfolio.com  
+
+--------------------------------------------
+
+EDUCATION
+CMR Institute of Technology, Bengaluru  
+Bachelor of Engineering in Computer Science (AI & ML)  
+Dec 2022 – May 2026  
+
+--------------------------------------------
+
+TECHNICAL SKILLS
+Programming Languages: Python, Java  
+Backend Development: Flask, FastAPI, REST APIs  
+Machine Learning & AI: Scikit-learn, TensorFlow, BERT, NLP  
+LLM & AI Systems: LangChain, RAG Pipelines, Embeddings, Vector Databases  
+Databases: MySQL, MongoDB  
+Tools & Technologies: Git, Docker, AWS, Jupyter Notebook, VS Code  
+Web Technologies: HTML, CSS, JavaScript  
+
+--------------------------------------------
+
+PROJECTS
+
+Enterprise Knowledge Copilot (RAG-based Chatbot)  
+- Developed a RAG-powered chatbot to answer company-specific queries using a custom knowledge base  
+- Implemented embedding pipelines and integrated a vector database for efficient semantic retrieval  
+- Used LangChain for chaining LLM workflows and improving response accuracy  
+- Deployed the application on AWS using Docker containers  
+- Tech Stack: Python, Flask, LangChain, Vector DB, Docker, AWS  
+
+Multi-label Toxicity Classification System  
+- Built an NLP-based multi-label classification model to detect harmful content categories  
+- Implemented BERT-based preprocessing and model pipeline for real-world text data  
+- Achieved ~70% classification accuracy through model tuning and feature engineering  
+- Developed REST APIs to serve model predictions  
+- Tech Stack: Python, TensorFlow, Scikit-learn, Flask  
+
+Currency Converter Chatbot  
+- Developed a chatbot to process natural language queries and provide real-time currency conversion  
+- Integrated third-party APIs for live exchange rates  
+- Deployed on Telegram using a scalable bot architecture  
+- Tech Stack: Python, Flask, Dialogflow, Telegram API  
+
+--------------------------------------------
+
+EXPERIENCE / PRACTICAL EXPOSURE
+- Built and deployed multiple backend applications using REST APIs  
+- Hands-on experience with Docker containerization and cloud deployment (AWS)  
+- Worked with real-world datasets for NLP and ML model development  
+- Experience integrating external APIs into production-ready applications  
+
+--------------------------------------------
+
+CORE COMPETENCIES
+- Strong problem-solving skills and understanding of Data Structures & Algorithms  
+- Experience in building scalable backend systems  
+- Knowledge of AI/ML pipelines and real-world deployment  
+- Familiar with software development lifecycle and version control  
+
+--------------------------------------------
+
+ACHIEVEMENTS
+- Awarded Best Mini Project for developing a real-time chatbot application  
+- Active participant in hackathons and coding competitions  
+
+--------------------------------------------
+
+CERTIFICATIONS
+- Machine Learning & Data Science Bootcamp – Udemy  
+- Deep Learning & NLP Certification – Udemy  
+- Supervised Machine Learning – Coursera  
+
+--------------------------------------------
+
+EXTRA-CURRICULAR ACTIVITIES
+- Participated in hackathons and collaborative development projects  
+- Volunteered in community service through NSS  
+- Attended technical seminars on backend and system design topics  
+
+--------------------------------------------
