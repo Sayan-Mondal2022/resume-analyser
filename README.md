@@ -1,1 +1,1 @@
-# resume-analyser
+# Resume Analyser
