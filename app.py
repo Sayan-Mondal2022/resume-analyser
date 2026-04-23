@@ -107,10 +107,10 @@ if (resume_file or resume_text_file) and (jd_file or jd_text_file):
                     matched_skills = jd_keywords & resume_keywords
 
                     st.session_state["analysis"] = {
-                        "final_score": round(final_score * 100, 2),
+                        "final_score": str(round(final_score * 100, 2)),
                         "interpretation": result.upper(),
-                        "phrase_score": round(phrase_score * 100, 2),
-                        "keyword_score": round(keyword_score * 100, 2),
+                        "phrase_score": str(round(phrase_score * 100, 2)),
+                        "keyword_score": str(round(keyword_score * 100, 2)),
                         "matched_skills": list(matched_skills),
                         "missing_skills": list(missing_skills),
                         "resume_keywords": list(resume_keywords),
