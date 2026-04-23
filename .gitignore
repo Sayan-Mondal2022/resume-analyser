@@ -4,6 +4,8 @@
 # Environment variables
 .env
 
+__pycache__/
+.vscode
 
 # Ignoring all .pdf files
 *.pdf
