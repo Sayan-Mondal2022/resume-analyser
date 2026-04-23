@@ -15,10 +15,12 @@ def extract_keywords(text: str) -> set[str]:
     return keywords
 
 
-def extract_phrases(text: str, keywords: str) -> list[str]:
+def extract_phrases(text: str) -> list[str]:
     doc = nlp(text)
 
     phrases = []
-    phrases = [chunk.text.lower() for chunk in doc.noun_chunks]
+    phrases = [
+        chunk.text.lower() for chunk in doc.noun_chunks if len(chunk.text.split()) > 1
+    ]
 
-    return list(filter(lambda phrase: phrase not in keywords, phrases))
+    return phrases
