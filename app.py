@@ -107,10 +107,10 @@ if (resume_file or resume_text_file) and (jd_file or jd_text_file):
                     matched_skills = jd_keywords & resume_keywords
 
                     st.session_state["analysis"] = {
-                        "final_score": final_score,
-                        "interpretation": result,
-                        "phrase_score": phrase_score,
-                        "keyword_score": keyword_score,
+                        "final_score": round(final_score * 100, 2),
+                        "interpretation": result.upper(),
+                        "phrase_score": round(phrase_score * 100, 2),
+                        "keyword_score": round(keyword_score * 100, 2),
                         "matched_skills": list(matched_skills),
                         "missing_skills": list(missing_skills),
                         "resume_keywords": list(resume_keywords),
@@ -129,23 +129,23 @@ if (resume_file or resume_text_file) and (jd_file or jd_text_file):
             st.subheader("Final Score")
             st.metric(
                 "Match Score",
-                f"{st.session_state['analysis']['final_score'] * 100:.2f}%",
+                f"{st.session_state['analysis']['final_score']} %",
             )
             st.subheader(
-                f"Final remarks: {st.session_state['analysis']['interpretation']}"
+                f"Final remarks: {st.session_state['analysis']['interpretation'].upper()}"
             )
 
             col1, col2 = st.columns(2)
             with col1:
                 st.metric(
                     "Phrase Score",
-                    f"{st.session_state['analysis']['phrase_score'] * 100:.2f}%",
+                    f"{st.session_state['analysis']['phrase_score']} %",
                 )
 
             with col2:
                 st.metric(
                     "Keyword Score",
-                    f"{st.session_state['analysis']['keyword_score'] * 100:.2f}%",
+                    f"{st.session_state['analysis']['keyword_score']} %",
                 )
 
         with tab2:
@@ -176,25 +176,19 @@ if (resume_file or resume_text_file) and (jd_file or jd_text_file):
                     st.write(response)
 
         with tab3:
-            st.write(
-                "Matched Skills", st.session_state["analysis"]["matched_skills"][:50]
-            )
-            st.write(
-                "Missing Skills", st.session_state["analysis"]["missing_skills"][:50]
-            )
+            st.write("Matched Skills", st.session_state["analysis"]["matched_skills"])
+            st.write("Missing Skills", st.session_state["analysis"]["missing_skills"])
 
             with st.expander("View Extracted Data"):
                 st.write(
                     "Resume Keywords:",
-                    st.session_state["analysis"]["resume_keywords"][:20],
+                    st.session_state["analysis"]["resume_keywords"],
                 )
-                st.write(
-                    "JD Keywords:", st.session_state["analysis"]["jd_keywords"][:20]
-                )
+                st.write("JD Keywords:", st.session_state["analysis"]["jd_keywords"])
                 st.write(
                     "Resume Phrases:",
-                    st.session_state["analysis"]["resume_phrases"][:20],
+                    st.session_state["analysis"]["resume_phrases"],
                 )
-                st.write("JD Phrases:", st.session_state["analysis"]["jd_phrases"][:20])
+                st.write("JD Phrases:", st.session_state["analysis"]["jd_phrases"])
 else:
     st.session_state["analysis"] = {}

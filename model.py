@@ -25,10 +25,10 @@ class ResumeAnalyzerModel:
     def get_insights(self, data: dict) -> str:
 
         prompt = self.prompt.format(
-            final_score=round(data["final_score"] * 100, 2),
+            final_score=data["final_score"],
             interpretation=data["interpretation"],
-            phrase_score=round(data["phrase_score"] * 100, 2),
-            keyword_score=round(data["keyword_score"] * 100, 2),
+            phrase_score=data["phrase_score"],
+            keyword_score=data["keyword_score"],
             matched_skills=", ".join(data["matched_skills"]),
             missing_skills=", ".join(data["missing_skills"]),
             resume_keywords=", ".join(data["resume_keywords"]),
