@@ -1,5 +1,7 @@
 import re
+import os
 import pdfplumber
+import tempfile
 
 
 def extract_text_from_pdf(file_path: str) -> str:
@@ -23,3 +25,19 @@ def clean_text(text: str) -> str:
     text = text.lower()
     text = re.sub(r"\s+", " ", text)
     return text.strip()
+
+
+def process_file(file):
+    if isinstance(file, str):
+        return clean_text(file)
+    with tempfile.NamedTemporaryFile(delete=False) as tmp:
+        tmp.write(file.read())
+        path = tmp.name
+
+    if file.name.endswith(".pdf"):
+        text = extract_text_from_pdf(path)
+    elif file.name.endswith(".txt"):
+        text = read_txt(path)
+
+    os.remove(path)
+    return clean_text(text)
