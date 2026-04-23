@@ -10,7 +10,7 @@ class Scorer:
         self.keyword_weight = keyword_weight
 
     def get_score(
-        resume_embeddings: list[ndarray], jd_embeddings: list[ndarray]
+        self, resume_embeddings: list[ndarray], jd_embeddings: list[ndarray]
     ) -> float32:
         score_matrix = cosine_similarity(resume_embeddings, jd_embeddings)
 
@@ -18,5 +18,20 @@ class Scorer:
 
         return best_matches.mean()
 
+    def keyword_score(self, resume_keywords: set[str], jd_keywords: set[str]):
+        common_skills = resume_keywords & jd_keywords
+        score = len(common_skills) / len(jd_keywords)
+        return score
+
     def final_score(self, phrase_score: float32, keyword_score: float32) -> float32:
         return self.phrase_weight * phrase_score + self.keyword_weight * keyword_score
+
+    def interpret(self, score):
+        if score >= 0.8:
+            return "Excellent Match"
+        elif score >= 0.6:
+            return "Good Match"
+        elif score >= 0.4:
+            return "Moderate Match"
+        else:
+            return "Low Match"
