@@ -5,13 +5,13 @@ from langchain_groq import ChatGroq
 
 class ResumeAnalyzerModel:
     def __init__(self) -> None:
-        self.llm = ChatGroq(temperature=0.3, model_name="llama-3.3-70b-versatile")
+        # self.llm = ChatGroq(temperature=0.3, model_name="llama-3.3-70b-versatile")
+        self.llm = ChatGroq(temperature=0.3, model_name="llama-3.1-8b-instant")
         self.template = prompt_template
 
         self.prompt = PromptTemplate(
             input_variables=[
                 "final_score",
-                "interpretation",
                 "phrase_score",
                 "keyword_score",
                 "matched_skills",
@@ -26,7 +26,6 @@ class ResumeAnalyzerModel:
 
         prompt = self.prompt.format(
             final_score=data["final_score"],
-            interpretation=data["interpretation"],
             phrase_score=data["phrase_score"],
             keyword_score=data["keyword_score"],
             matched_skills=", ".join(data["matched_skills"]),
