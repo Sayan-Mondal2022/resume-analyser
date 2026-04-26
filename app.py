@@ -65,7 +65,7 @@ with col2:
 
 
 if (resume_file or resume_text_file) and (jd_file or jd_text_file):
-    if st.button("Analyze"):
+    if st.button("Analyze", use_container_width=True):
         if not resume_text_file and not resume_file:
             st.warning("Please upload or paste a Resume before analyzing.")
         elif not jd_text_file and not jd_file:
@@ -126,14 +126,27 @@ if (resume_file or resume_text_file) and (jd_file or jd_text_file):
         tab1, tab2, tab3 = st.tabs(["Overview", "AI Insights", "Deep Dive"])
 
         with tab1:
-            st.subheader("Final Score")
-            st.metric(
-                "Match Score",
-                f"{st.session_state['analysis']['final_score']} %",
+            st.markdown(
+                f"""
+                <div style="
+                    background-color:#007200;
+                    color:white;
+                    padding:15px;
+                    border-radius:12px;
+                    text-align:center;
+                    font-weight:800;
+                    font-size:32px;
+                ">
+                    {st.session_state['analysis']['interpretation'].upper()}
+                </div>
+                """,
+                unsafe_allow_html=True,
             )
-            st.subheader(
-                f"Final remarks: {st.session_state['analysis']['interpretation'].upper()}"
-            )
+
+            st.markdown("## Final Score")
+            st.markdown(f"## {st.session_state['analysis']['final_score']} %")
+
+            st.markdown("---")
 
             col1, col2 = st.columns(2)
             with col1:
@@ -149,7 +162,7 @@ if (resume_file or resume_text_file) and (jd_file or jd_text_file):
                 )
 
         with tab2:
-            if st.button("Get AI Insights"):
+            if st.button("Get AI Insights", use_container_width=True):
                 with st.spinner("Generating Insights..."):
                     model = load_model()
                     data = {
